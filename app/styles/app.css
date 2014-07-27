@@ -1,3 +1,84 @@
-html, body {
-  margin: 20px;
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+ }
+
+.controls {
+    background: linear-gradient(to bottom, #fcfcfc 0%,#e6e6e6 100%);
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.sidebar {
+    background-color: #efefef;
+    width: 200px;
+    position: absolute;
+    top: 100px;
+    bottom: 30px;
+    left: 0;
+    overflow: scroll;
+    border-right: 1px solid #dedede;
+}
+
+.content {
+    position: absolute;
+    left: 200px;
+    top: 100px;
+    right: 0;
+    bottom: 30px;
+    overflow: scroll;
+}
+
+.status {
+    background: linear-gradient(to bottom, #fcfcfc 0%,#e2e2e2 100%);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30px;
+    overflow: hidden;
+    border-top: 1px solid #bfbfbf;
+}
+
+/* sidebar */
+.sidebar-navigation-component {
+}
+
+.sidebar-title {
+    color: #8d8d8d;
+    margin: 0 0 7px 0;
+    padding: 10px 0 0 10px;
+    text-shadow: 0 1px 0 white;
+}
+
+.sidebar-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.sidebar-item a {
+    color: #3e3e3e;
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+    padding: 5px 0 5px 10px;
+    text-shadow: 0 1px 0 white;
+}
+
+.sidebar-item a:hover {
+    color: #474747;
+}
+
+.sidebar-item a.active {
+    background-color: #4b4b4b;
+    color: white;
+    text-shadow: none;
 }
