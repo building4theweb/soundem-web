@@ -6,7 +6,8 @@
   </ul>
   <h6 class="sidebar-title">PLAYLISTS <button {{action 'createPlaylist'}}>+</button></h6>
   <ul class="sidebar-list">
-    <li class="sidebar-item"><a href="#">Playlist 1</a></li>
-    <li class="sidebar-item"><a href="#">Playlist 2</a></li>
+    {{#each playlists}}
+      <li class="sidebar-item">{{link-to name 'playlist' this}}</li>
+    {{/each}}
   </ul>
 </div>
