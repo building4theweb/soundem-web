@@ -1,5 +1,11 @@
 <h1>Albums</h1>
 
 {{#each}}
-  <strong>{{name}}</strong> by {{artist.name}}<br>
+  {{#link-to 'album' this}}
+    <div class="album">
+      <img {{bind-attr src=artworkURL}} class="album-artwork">
+      <div class="album-name">{{name}}</div>
+      <div class="album-artist">{{artist.name}}</div>
+    </div>
+  {{/link-to}}
 {{/each}}

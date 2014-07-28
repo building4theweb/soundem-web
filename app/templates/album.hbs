@@ -1,0 +1,9 @@
+<h1>{{name}}</h1>
+<p>by {{artist.name}}</p>
+<img {{bind-attr src=artworkURL}} class="album-artwork"><br>
+
+<ul>
+  {{#each songs}}
+    <li>{{name}}</li>
+  {{/each}}
+</ul>
