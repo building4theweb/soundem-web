@@ -9,6 +9,7 @@ Router.map(function() {
     this.route('album', {path: '/:album_id'});
   });
   this.route('songs');
+  this.route('song');
 });
 
 export default Router;
