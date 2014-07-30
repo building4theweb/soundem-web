@@ -1,0 +1,6 @@
+<h1>Favorites</h1>
+{{#each}}
+  {{se-song song=this
+            onPlay='songPlayAction'
+            onPause='songPauseAction'}}
+{{/each}}

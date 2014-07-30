@@ -1,0 +1,10 @@
+{{#if hasUrl}}
+  {{#if isPlaying}}
+    <button {{action 'pauseSong'}}>Pause</button>
+  {{else}}
+    <button {{action 'playSong'}}>Play</button>
+  {{/if}}
+{{else}}
+  <button disabled>Play</button>
+{{/if}}
+{{song.name}}

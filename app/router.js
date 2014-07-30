@@ -10,8 +10,8 @@ Router.map(function() {
   });
 
   this.resource('songs');
-  this.resource('playlist', {path: '/playlists/:playlist_id'});
-
+  this.resource('favorites');
+  this.route('application');
 });
 
 export default Router;
