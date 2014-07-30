@@ -15,7 +15,7 @@ Album.reopenClass({
 
     {id: 2, name: 'Terror Amor', artist: 2,
     artworkURL: 'http://i.imgur.com/0Z7W6hh.jpg',
-    songs: [4]}
+    songs: [4, 5]}
   ]
 });
 

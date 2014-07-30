@@ -2,15 +2,18 @@ import DS from 'ember-data';
 
 var Song = DS.Model.extend({
   name: DS.attr('string'),
-  album: DS.belongsTo('album')
+  album: DS.belongsTo('album'),
+  favorite: DS.attr('boolean'),
+  url: DS.attr('string')
 });
 
 Song.reopenClass({
   FIXTURES: [
-    {id: 1, name: 'Pretty When You Cry', album: 1},
-    {id: 2, name: 'Money Power Glory', album: 1},
-    {id: 3, name: 'West Coast', album: 1},
-    {id: 4, name: 'Animal', album: 2}
+    {id: 1, name: 'Pretty When You Cry', album: 1, favorite: true},
+    {id: 2, name: 'Money Power Glory', album: 1, favorite: false},
+    {id: 3, name: 'West Coast', album: 1, favorite: true},
+    {id: 4, name: 'Animal', album: 2, favorite: false},
+    {id: 5, name: 'Dura Como Piedra', album: 2, favorite: true, url: 'http://upload.wikimedia.org/wikipedia/commons/5/5b/Ludwig_van_Beethoven_-_Symphonie_5_c-moll_-_1._Allegro_con_brio.ogg'}
   ]
 });
 
