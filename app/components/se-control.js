@@ -6,11 +6,11 @@ export default Ember.Component.extend({
   actions: {
     play: function() {
       this.sendAction('onPlay');
-      this.toggleProperty('isPlaying');
+      this.set('isPlaying', true);
     },
     pause: function() {
       this.sendAction('onPause');
-      this.toggleProperty('isPlaying');
+      this.set('isPlaying', false);
     },
     prev: function() {
       this.sendAction('onPrev');

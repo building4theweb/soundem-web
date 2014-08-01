@@ -1,6 +1,7 @@
 <h1>Favorites</h1>
 {{#each song in this}}
   {{se-song song=song
+            audioPlayerIsPlaying=audioPlayerIsPlaying
             currentlyPlaying=playingSong
             currentlySelected=selectedSong
             onPlay='songPlayAction'
