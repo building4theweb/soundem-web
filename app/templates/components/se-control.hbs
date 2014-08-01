@@ -1,0 +1,9 @@
+<button {{action 'prev'}}>Prev</button>
+
+{{#if isPlaying}}
+  <button {{action 'pause'}}>Pause</button>
+{{else}}
+  <button {{action 'play'}}>Play</button>
+{{/if}}
+
+<button {{action 'next'}}>Next</button>

@@ -92,3 +92,21 @@
     width: 200px;
     height: 200px;
 }
+
+.se-song {
+    cursor: pointer;
+    -webkit-user-select: none;
+}
+
+.se-song.is-selected {
+    background-color: #3f89ff;
+    color: white;
+}
+
+.song-status {
+    display: inline-block;
+}
+
+.song-name {
+    display: inline-block;
+}

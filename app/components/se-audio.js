@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   attributeBindings: ['src'],
 
   playingStatusChanged: function() {
+    console.log('playingStatusChanged', this.get('isPlaying'));
     var self = this;
 
     if(this.get('isPlaying')) {
@@ -16,5 +17,5 @@ export default Ember.Component.extend({
         self.$()[0].pause();
       });
     }
-  }.observes('isPlaying')
+  }.observes('isPlaying', 'audioPlayerURL')
 });

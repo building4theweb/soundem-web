@@ -1,10 +1,12 @@
-{{#if hasUrl}}
-  {{#if isPlaying}}
-    <button {{action 'pauseSong'}}>Pause</button>
-  {{else}}
-    <button {{action 'playSong'}}>Play</button>
-  {{/if}}
-{{else}}
-  <button disabled>Play</button>
-{{/if}}
-{{song.name}}
+<div {{action 'playSong' on='doubleClick'}} {{bind-attr class=":se-song isSelected"}}>
+  <div class="song-status">
+    {{#if isPlaying}}
+      [II]
+    {{else}}
+      [>]
+    {{/if}}
+  </div>
+  <div class="song-name">
+    {{song.name}}
+  </div>
+</div>
