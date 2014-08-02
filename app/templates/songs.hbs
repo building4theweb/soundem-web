@@ -1,5 +1,11 @@
 <h1>Songs</h1>
 
-{{#each}}
-  {{name}} - {{album.name}} - {{album.artist.name}} - fav: {{favorite}}<br>
+{{#each song in this}}
+  {{se-song song=song
+            audioPlayerIsPlaying=audioPlayerIsPlaying
+            currentlyPlaying=playingSong
+            currentlySelected=selectedSong
+            onPlay='songPlayAction'
+            onPause='songPauseAction'
+            onSelected='songSelected'}}
 {{/each}}

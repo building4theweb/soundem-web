@@ -19,25 +19,34 @@ export default Ember.Route.extend({
 
       this.controller.set('audioPlayerURL', url);
       this.controller.set('audioPlayerIsPlaying', isPlaying);
+
       this.controllerFor('favorites').set('audioPlayerIsPlaying', isPlaying);
       this.controllerFor('favorites').set('playingSong', playingSong);
+
+      this.controllerFor('songs').set('audioPlayerIsPlaying', isPlaying);
+      this.controllerFor('songs').set('playingSong', playingSong);
     },
     songPauseAction: function() {
       this.controller.set('audioPlayerIsPlaying',false);
+
       this.controllerFor('favorites').set('audioPlayerIsPlaying', false);
+      this.controllerFor('songs').set('audioPlayerIsPlaying', false);
     },
     songSelected: function(song) {
       this.controllerFor('favorites').set('selectedSong', song.id);
+      this.controllerFor('songs').set('selectedSong', song.id);
     },
 
     // se-control actions
     ctrlOnPlay: function() {
       console.log('ctrlOnPlay');
       this.controllerFor('favorites').set('audioPlayerIsPlaying', true);
+      this.controllerFor('songs').set('audioPlayerIsPlaying', true);
     },
     ctrlOnPause: function() {
       console.log('ctrlPause');
       this.controllerFor('favorites').set('audioPlayerIsPlaying', false);
+      this.controllerFor('songs').set('audioPlayerIsPlaying', false);
     },
     ctrlOnPrev: function() {
       console.log('ctrlOnPrev');
