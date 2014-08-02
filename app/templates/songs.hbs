@@ -1,8 +1,12 @@
 <h1>Songs</h1>
 
-{{#each song in this}}
+{{#each song in controller}}
   {{se-song song=song
+            songSelected=songSelected
+            songPlayingUrl=songPlayingUrl
+            audioIsPlaying=audioIsPlaying
             onPlay='songPlayAction'
             onPause='songPauseAction'
             onSelected='songSelectedAction'}}
 {{/each}}
+
