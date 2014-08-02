@@ -1,3 +1,4 @@
+<div class="invisible">{{render 'audio'}}</div>
 <section class="controls">
   {{se-control isPlaying=audioIsPlaying
                onPlay='songPlayAction'
@@ -11,8 +12,6 @@
 </section>
 
 <section class="content">
-  audioIsPlaying: {{audioIsPlaying}}
-  {{render 'audio'}}
   {{outlet}}
 </section>
 

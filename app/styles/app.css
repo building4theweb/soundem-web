@@ -110,3 +110,7 @@
 .song-name {
     display: inline-block;
 }
+
+.invisible {
+    display: none;
+}
