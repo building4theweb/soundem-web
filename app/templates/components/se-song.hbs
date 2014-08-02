@@ -1,9 +1,13 @@
-<div {{action 'playSong' on='doubleClick'}} {{bind-attr class=":se-song isSelected"}}>
+<div {{bind-attr class=":se-song isSelected"}}>
   <div class="song-status">
     {{#if isPlaying}}
       [II]
     {{else}}
-      [>]
+      {{#if song.url}}
+        [>]
+      {{else}}
+        [x]
+      {{/if}}
     {{/if}}
   </div>
   <div class="song-name">

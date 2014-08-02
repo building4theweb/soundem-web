@@ -3,18 +3,24 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   hasUrl: Ember.computed.notEmpty('song.url'),
 
-  isPlaying: function() {
-    if(this.get('song.url') && this.get('audioPlayerIsPlaying')) {
-      return this.get('currentlyPlaying') === this.get('song').id;
-    }
-  }.property('currentlyPlaying', 'audioPlayerIsPlaying'),
-
   isSelected: function() {
-    return this.get('currentlySelected') === this.get('song').id;
-  }.property('currentlySelected'),
+    return this.get('songSelected') === this.get('song.id');
+  }.property('songSelected'),
 
+  isPlaying: function() {
+    if (this.get('audioIsPlaying') && this.get('song.url')) {
+      return this.get('songPlayingUrl') === this.get('song.url');
+    } else {
+      return false;
+    }
+  }.property('songPlayingUrl', 'audioIsPlaying'),
+
+  // Events
   click: function() {
     this.sendAction('onSelected', this.get('song'));
+  },
+  doubleClick: function() {
+    this.sendAction('onPlay', this.get('song'));
   },
 
   actions: {

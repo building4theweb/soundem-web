@@ -1,11 +1,9 @@
-{{se-audio src=audioPlayerURL isPlaying=audioPlayerIsPlaying}}
-
 <section class="controls">
-  {{se-control isPlaying=audioPlayerIsPlaying
-               onPlay='ctrlOnPlay'
-               onPause='ctrlOnPause'
-               onNext='ctrlOnNext'
-               onPrev='ctrlOnPrev'}}
+  {{se-control isPlaying=audioIsPlaying
+               onPlay='songPlayAction'
+               onPause='songPauseAction'
+               onNext='songNextAction'
+               onPrev='songPrevAction'}}
 </section>
 
 <section class="sidebar">
@@ -13,6 +11,8 @@
 </section>
 
 <section class="content">
+  audioIsPlaying: {{audioIsPlaying}}
+  {{render 'audio'}}
   {{outlet}}
 </section>
 

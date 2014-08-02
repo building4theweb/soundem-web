@@ -3,57 +3,19 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   actions: {
     songPlayAction: function(song) {
-      var url,
-          isPlaying,
-          playingSong;
-
-      if(song.get('url')) {
-        url = song.get('url');
-        isPlaying = true;
-        playingSong = song.get('id');
-      } else {
-        url = null;
-        isPlaying = false;
-        playingSong = null;
-      }
-
-      this.controller.set('audioPlayerURL', url);
-      this.controller.set('audioPlayerIsPlaying', isPlaying);
-
-      this.controllerFor('favorites').set('audioPlayerIsPlaying', isPlaying);
-      this.controllerFor('favorites').set('playingSong', playingSong);
-
-      this.controllerFor('songs').set('audioPlayerIsPlaying', isPlaying);
-      this.controllerFor('songs').set('playingSong', playingSong);
+      this.controllerFor('audio').send('play', song);
     },
     songPauseAction: function() {
-      this.controller.set('audioPlayerIsPlaying',false);
-
-      this.controllerFor('favorites').set('audioPlayerIsPlaying', false);
-      this.controllerFor('songs').set('audioPlayerIsPlaying', false);
+      this.controllerFor('audio').send('pause');
     },
-    songSelected: function(song) {
-      this.controllerFor('favorites').set('selectedSong', song.id);
-      this.controllerFor('songs').set('selectedSong', song.id);
+    songNextAction: function() {
+      console.log('songNextAction');
     },
-
-    // se-control actions
-    ctrlOnPlay: function() {
-      console.log('ctrlOnPlay');
-      this.controllerFor('favorites').set('audioPlayerIsPlaying', true);
-      this.controllerFor('songs').set('audioPlayerIsPlaying', true);
+    songPrevAction: function() {
+      console.log('songPrevAction');
     },
-    ctrlOnPause: function() {
-      console.log('ctrlPause');
-      this.controllerFor('favorites').set('audioPlayerIsPlaying', false);
-      this.controllerFor('songs').set('audioPlayerIsPlaying', false);
-    },
-    ctrlOnPrev: function() {
-      console.log('ctrlOnPrev');
-    },
-    ctrlOnNext: function() {
-      console.log('ctrlOnNext');
+    songSelectedAction: function(song) {
+      this.controllerFor('audio').send('select', song);
     }
-
   }
 });

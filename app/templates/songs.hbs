@@ -2,10 +2,7 @@
 
 {{#each song in this}}
   {{se-song song=song
-            audioPlayerIsPlaying=audioPlayerIsPlaying
-            currentlyPlaying=playingSong
-            currentlySelected=selectedSong
             onPlay='songPlayAction'
             onPause='songPauseAction'
-            onSelected='songSelected'}}
+            onSelected='songSelectedAction'}}
 {{/each}}

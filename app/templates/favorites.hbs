@@ -1,10 +1,10 @@
 <h1>Favorites</h1>
-{{#each song in this}}
+{{#each song in controller}}
   {{se-song song=song
-            audioPlayerIsPlaying=audioPlayerIsPlaying
-            currentlyPlaying=playingSong
-            currentlySelected=selectedSong
+            songSelected=songSelected
+            songPlayingUrl=songPlayingUrl
+            audioIsPlaying=audioIsPlaying
             onPlay='songPlayAction'
             onPause='songPauseAction'
-            onSelected='songSelected'}}
+            onSelected='songSelectedAction'}}
 {{/each}}
