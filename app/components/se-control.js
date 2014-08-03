@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  classNames: ['se-control'],
+
   actions: {
     play: function() {
       this.sendAction('onPlay');

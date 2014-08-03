@@ -114,3 +114,25 @@
 .invisible {
     display: none;
 }
+
+/* se-control */
+.se-control {
+    margin: 20px 0 0 50px;
+}
+.se-ctrl-btn-img {
+    width: 20px;
+    height: 20px;
+}
+
+.se-ctrl-btn-pause,
+.se-ctrl-btn-play {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    position: relative;
+    top: 9px;
+}
+
+.se-ctrl-btn-link {
+    text-decoration: none;
+}

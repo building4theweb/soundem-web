@@ -1,9 +1,17 @@
-<button {{action 'prev'}}>Prev</button>
+<a href="#" {{action 'prev'}} class="se-ctrl-btn-link">
+  <img src="images/previous.svg" class="se-ctrl-btn-img se-ctrl-btn-previous">
+</a>
 
 {{#if isPlaying}}
-  <button {{action 'pause'}}>Pause</button>
+  <a href="#" {{action 'pause'}} class="se-ctrl-btn-link">
+    <img src="images/pause.svg" class="se-ctrl-btn-img se-ctrl-btn-pause">
+  </a>
 {{else}}
-  <button {{action 'play'}}>Play</button>
+  <a href="#" {{action 'play'}} class="se-ctrl-btn-link">
+    <img src="images/play.svg" class="se-ctrl-btn-img se-ctrl-btn-play">
+  </a>
 {{/if}}
 
-<button {{action 'next'}}>Next</button>
+<a href="#" {{action 'next'}} class="se-ctrl-btn-link">
+  <img src="images/next.svg" class="se-ctrl-btn-img se-ctrl-btn-next">
+</a>
