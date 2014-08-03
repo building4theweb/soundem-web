@@ -86,11 +86,21 @@
 /* album */
 .album {
     float:left;
+    margin: 20px 0 0 20px;
+    text-align: center;
 }
-
 .album-artwork {
     width: 200px;
     height: 200px;
+    border: 1px solid #989898;
+}
+a .album-name {
+    color: black;
+    font-size: 16px;
+}
+a .album-artist {
+    color:#bfbfbf;
+    font-size: 12px;
 }
 
 

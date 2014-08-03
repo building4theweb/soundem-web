@@ -2,8 +2,8 @@
 <p>by {{artist.name}}</p>
 <img {{bind-attr src=artworkURL}} class="album-artwork"><br>
 
-<ul>
+<div class="album-track-list">
   {{#each song in songs}}
     {{view 'song' song=song}}
   {{/each}}
-</ul>
+</div>
