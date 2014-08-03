@@ -1,5 +1,19 @@
-<div {{bind-attr class=":se-song view.isSelected"}}>
+<div {{bind-attr class=":song-view view.isSelected"}}>
+  <div class="song-star">
+    <a href="#" class="song-star-link" {{action 'onSongFavoriteToggle' song}}>
+      <img {{bind-attr src=view.starImage}}>
+    </a>
+  </div>
   <div class="song-name">
     {{song.name}}
+  </div>
+  <div class="song-album">
+    {{song.album.name}}
+  </div>
+  <div class="song-artist">
+    {{song.album.artist.name}}
+  </div>
+  <div class="song-duration">
+    10:00
   </div>
 </div>

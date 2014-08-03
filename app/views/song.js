@@ -5,6 +5,13 @@ export default Ember.View.extend({
   song: null,
   hasUrl: Ember.computed.notEmpty('song.url'),
 
+  starImage: function() {
+    if (this.get('song.favorite')) {
+      return 'images/star-on.svg';
+    }
+    return 'images/star-off.svg';
+  }.property('song.favorite'),
+
   isSelected: function() {
     return this.get('controller.songSelected') === this.get('song');
   }.property('controller.songSelected', 'song'),

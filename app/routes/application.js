@@ -16,6 +16,10 @@ export default Ember.Route.extend({
     },
     onSongSelected: function(song) {
       this.controllerFor('audio').send('select', song);
+    },
+    onSongFavoriteToggle: function(song) {
+      song.toggleProperty('favorite', true);
+      song.save();
     }
   }
 });

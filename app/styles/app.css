@@ -93,23 +93,50 @@
     height: 200px;
 }
 
-.se-song {
+
+/* song */
+.song-view {
     cursor: pointer;
     -webkit-user-select: none;
+    width: 100%;
+    padding: 3px 5px;
+    border-bottom: 1px solid #f3f3f3;
 }
-
-.se-song.is-selected {
+.song-view.is-selected {
     background-color: #3f89ff;
     color: white;
 }
-
-.song-status {
+.song-star,
+.song-star-link,
+.song-name,
+.song-album,
+.song-artist,
+.song-duration {
     display: inline-block;
 }
-
+.song-star-link {
+    position:relative;
+    top:2px;
+}
 .song-name {
-    display: inline-block;
+    width: 40%;
 }
+.song-album,
+.song-artist {
+    width: 20%;
+}
+/* song lists */
+.song-list-header {
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 3px 5px;
+    font-weight: bold;
+    font-size:10px;
+    color:#7f7f7f;
+}
+
+
+
 
 .invisible {
     display: none;
