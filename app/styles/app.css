@@ -5,6 +5,41 @@
   box-sizing: border-box;
  }
 
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input {
+    background-color: white;
+    font-size: 19px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #bfbfbf;
+}
+input:hover {
+    border: 2px solid #7f7f7f;
+}
+input:focus {
+    border: 2px solid #44b1f6;
+    outline: 0;
+}
+
+button {
+    background-color: #44b1f6;
+    border: 0;
+    color: white;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 16px;
+    outline: 0;
+}
+button:hover {
+    background-color: #1295ff;
+}
+button:active {
+    background-color: #105ab3;
+}
+
 .controls {
     background: linear-gradient(to bottom, #fcfcfc 0%,#e6e6e6 100%);
     width: 100%;
@@ -282,4 +317,40 @@ a .album-artist {
     width: 60px;
     height: 60px;
     border: 1px solid #AAA;
+}
+
+/* auth form styles */
+.auth-form-wrapper {
+    width: 400px;
+    padding: 20px 40px;
+    margin: 30px auto 0 auto;
+    background-color: #f9f9f9;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+}
+
+.auth-form-wrapper input {
+    width: 100%;
+}
+
+.auth-form-wrapper h1,
+.auth-form-wrapper h3 {
+    margin: 0;
+}
+
+.auth-form-wrapper a {
+    text-decoration: none;
+    color: #44b1f6;
+}
+
+.auth-form-wrapper a:hover {
+    text-decoration: underline;
+}
+
+.auth-logo {
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 100;
+    font-size: 100px;
+    color:#767676;
 }
