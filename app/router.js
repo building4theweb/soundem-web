@@ -11,7 +11,6 @@ Router.map(function() {
 
   this.resource('songs');
   this.resource('favorites');
-  this.route('application');
 });
 
 export default Router;
