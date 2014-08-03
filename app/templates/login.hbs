@@ -1,0 +1,6 @@
+<h1>Login</h1>
+<form {{action 'submitForm'}}>
+  <p>{{input type="text" value=email placeholder="Email" autofocus="autofocus"}}</p>
+  <p>{{input type="password" value=password placeholder="Password"}}</p>
+  <p><button>Login</button> or {{link-to 'Register' 'register'}}</p>
+</form>

@@ -5,6 +5,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('login');
+  this.route('register');
+  this.route('logout');
+
   this.resource('music', function() {
     this.resource('albums', function() {
       this.resource('album', {path: '/:album_id'});
