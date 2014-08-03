@@ -89,6 +89,7 @@
     text-shadow: none;
 }
 
+
 /* album */
 .album {
     float:left;
@@ -107,6 +108,30 @@ a .album-name {
 a .album-artist {
     color:#bfbfbf;
     font-size: 12px;
+}
+.album-detail-wrapper {
+    padding: 20px;
+}
+.album-name-big {
+    margin: 0;
+}
+.album-artist-big {
+    margin: 0 0 20px 0;
+    color: #7f7f7f;
+}
+.album-artwork-big {
+    width: 350px;
+    height: 350px;
+    border: 1px solid #989898;
+}
+.album-detail-info {
+    float:left;
+    margin-right: 10px;
+}
+.album-track-list {
+    width: 520px;
+    float:left;
+    margin-top:55px;
 }
 
 

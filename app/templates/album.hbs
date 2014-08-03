@@ -1,9 +1,14 @@
-<h1>{{name}}</h1>
-<p>by {{artist.name}}</p>
-<img {{bind-attr src=artworkURL}} class="album-artwork"><br>
+<div class="album-detail-wrapper">
+  <div class="album-detail-info">
+    <h1 class="album-name-big">{{name}}</h1>
+    <p class="album-artist-big">by {{artist.name}}</p>
+    <div><img {{bind-attr src=artworkURL}} class="album-artwork-big"></div>
+  </div>
 
-<div class="album-track-list">
-  {{#each song in songs}}
-    {{view 'song' song=song}}
-  {{/each}}
+  <div class="album-track-list">
+    <h3>Tracks</h3>
+    {{#each song in songs}}
+      {{view 'song' song=song}}
+    {{/each}}
+  </div>
 </div>
