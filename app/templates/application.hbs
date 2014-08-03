@@ -10,7 +10,14 @@
 </section>
 
 <section class="sidebar">
-  {{se-sidebar playlists=playlists}}
+  <div class="sidebar-navigation-component">
+    <h6 class="sidebar-title">YOUR MUSIC</h6>
+    <ul class="sidebar-list">
+      <li class="sidebar-item">{{link-to 'Albums' 'albums'}}</li>
+      <li class="sidebar-item">{{link-to 'Songs' 'songs'}}</li>
+      <li class="sidebar-item">{{link-to 'Favorites' 'favorites'}}</li>
+    </ul>
+  </div>
 </section>
 
 <section class="content">
