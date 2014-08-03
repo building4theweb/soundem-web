@@ -45,12 +45,18 @@
     height: 30px;
     overflow: hidden;
     border-top: 1px solid #bfbfbf;
+    text-align:center;
+}
+
+/* status */
+.status-message {
+    font-size: 12px;
+    margin-top: 7px;
+    color:#656565;
+    text-shadow: 0 1px 0 white;
 }
 
 /* sidebar */
-.sidebar-navigation-component {
-}
-
 .sidebar-title {
     color: #8d8d8d;
     margin: 0 0 7px 0;

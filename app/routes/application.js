@@ -1,6 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  setupController: function(controller, model) {
+    this._super(controller, model);
+    var userId = 1;
+    controller.set('account', this.store.find('account', userId));
+  },
+
   actions: {
     onSongPlay: function(song) {
       this.controllerFor('audio').send('play', song);
