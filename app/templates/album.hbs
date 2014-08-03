@@ -8,7 +8,7 @@
   <div class="album-track-list">
     <h3>Tracks</h3>
     {{#each song in songs}}
-      {{view 'song' song=song}}
+      {{view 'song' song=song inAlbumView=true}}
     {{/each}}
   </div>
 </div>
