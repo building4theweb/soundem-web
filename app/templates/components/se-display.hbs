@@ -4,6 +4,9 @@
   {{else}}
     <h3>Paused</h3>
   {{/if}}
+  <div class="se-display-artwork">
+    <img {{bind-attr src=songInPlayer.album.artworkURL}} class="se-display-artwork-img">
+  </div>
   <h1>{{songInPlayer.name}}</h1>
 {{else}}
   <h1>Welcome to Soundem</h1>
