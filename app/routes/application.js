@@ -2,19 +2,19 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   actions: {
-    songPlayAction: function(song) {
+    onSongPlay: function(song) {
       this.controllerFor('audio').send('play', song);
     },
-    songPauseAction: function() {
+    onSongPause: function() {
       this.controllerFor('audio').send('pause');
     },
-    songNextAction: function() {
+    onSongNext: function() {
       console.log('songNextAction');
     },
-    songPrevAction: function() {
+    onSongPrev: function() {
       console.log('songPrevAction');
     },
-    songSelectedAction: function(song) {
+    onSongSelected: function(song) {
       this.controllerFor('audio').send('select', song);
     }
   }

@@ -1,10 +1,10 @@
 <div class="invisible">{{render 'audio'}}</div>
 <section class="controls">
   {{se-control isPlaying=audioIsPlaying
-               onPlay='songPlayAction'
-               onPause='songPauseAction'
-               onNext='songNextAction'
-               onPrev='songPrevAction'}}
+               onPlay='onSongPlay'
+               onPause='onSongPause'
+               onNext='onSongNext'
+               onPrev='onSongPrev'}}
 
   {{se-display isPlaying=audioIsPlaying songInPlayer=songInPlayer}}
 </section>

@@ -117,7 +117,17 @@
 
 /* se-control */
 .se-control {
-    margin: 20px 0 0 50px;
+    margin: 20px 0 0 30px;
+    background-color: #e9ebee;
+    display:inline-block;
+    text-align: center;
+    height: 60px;
+    padding: 0 17px;
+    border: 1px solid #a1a3a8;
+    border-radius: 40px;
+    box-shadow:
+        0 1px 0 rgba(255,255,255,0.6) inset,
+        0 -10px 20px rgba(0,0,0,0.1) inset;
 }
 .se-ctrl-btn-img {
     width: 20px;
@@ -146,7 +156,7 @@
     margin: 0 auto;
     padding:20px 0;
     position:relative;
-    top:-55px;
+    top:-70px;
     border-radius: 5px;
     border: 1px solid #b0b2b7;
     overflow:hidden;
@@ -165,6 +175,8 @@
 .se-display h3 {
     margin: 0;
     font-size: 12px;
+    font-weight: normal;
+    color: #84878d;
 }
 
 .se-display-artwork {
