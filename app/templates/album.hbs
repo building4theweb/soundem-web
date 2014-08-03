@@ -3,7 +3,7 @@
 <img {{bind-attr src=artworkURL}} class="album-artwork"><br>
 
 <ul>
-  {{#each songs}}
-    <li>{{name}} - fav: {{favorite}}</li>
+  {{#each song in songs}}
+    {{view 'song' song=song}}
   {{/each}}
 </ul>
