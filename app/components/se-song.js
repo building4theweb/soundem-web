@@ -4,16 +4,16 @@ export default Ember.Component.extend({
   hasUrl: Ember.computed.notEmpty('song.url'),
 
   isSelected: function() {
-    return this.get('songSelected') === this.get('song.id');
+    return this.get('songSelected.id') === this.get('song.id');
   }.property('songSelected'),
 
   isPlaying: function() {
-    if (this.get('audioIsPlaying') && this.get('song.url')) {
-      return this.get('songPlayingUrl') === this.get('song.url');
+    if (this.get('audioIsPlaying') && this.get('song')) {
+      return this.get('songInPlayer') === this.get('song');
     } else {
       return false;
     }
-  }.property('songPlayingUrl', 'audioIsPlaying'),
+  }.property('songInPlayer', 'audioIsPlaying'),
 
   // Events
   click: function() {

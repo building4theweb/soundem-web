@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   player: null,
-  url: null,
-  selected: null,
+  songInPlayer: null,
+  songSelected: null,
   isPlaying: false,
 
   actions: {
@@ -11,10 +11,10 @@ export default Ember.Controller.extend({
       var player = this.get('player');
 
       if (song) {
-        this.set('url', song.get('url'));
+        this.set('songInPlayer', song);
       }
 
-      if (this.get('url')) {
+      if (this.get('songInPlayer')) {
         this.set('isPlaying', true);
       }
 
@@ -23,7 +23,7 @@ export default Ember.Controller.extend({
       });
     },
     playSelected: function() {
-      this.send('play', this.get('selected'));
+      this.send('play', this.get('songSelected'));
     },
     pause: function() {
       var self = this;
@@ -35,7 +35,7 @@ export default Ember.Controller.extend({
       });
     },
     select: function(song) {
-      this.set('selected', song.get('id'));
+      this.set('songSelected', song);
     },
 
     // This is called by the view afer insert
