@@ -1,0 +1,10 @@
+{{#if songInPlayer}}
+  {{#if isPlaying}}
+    <h3>Playing</h3>
+  {{else}}
+    <h3>Paused</h3>
+  {{/if}}
+  <h1>{{songInPlayer.name}}</h1>
+{{else}}
+  <h1>Welcome to Soundem</h1>
+{{/if}}
