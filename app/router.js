@@ -5,12 +5,13 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('albums', function() {
-    this.resource('album', {path: '/:album_id'});
+  this.resource('music', function() {
+    this.resource('albums', function() {
+      this.resource('album', {path: '/:album_id'});
+    });
+    this.resource('songs');
+    this.resource('favorites');
   });
-
-  this.resource('songs');
-  this.resource('favorites');
 });
 
 export default Router;
