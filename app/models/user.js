@@ -7,11 +7,11 @@ var User = DS.Model.extend({
   durationTotal: DS.attr('number')
 });
 
-User.reopenClass({
-  FIXTURES: [
-    {id: 1, songTotal: 11, albumTotal: 3, durationTotal: 1322},
-    {id: 2, songTotal: 21, albumTotal: 23, durationTotal: 21322},
-  ]
-});
+// User.reopenClass({
+//   FIXTURES: [
+//     {id: 1, songTotal: 11, albumTotal: 3, durationTotal: 1322},
+//     {id: 2, songTotal: 21, albumTotal: 23, durationTotal: 21322},
+//   ]
+// });
 
 export default User;

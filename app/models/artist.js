@@ -6,11 +6,11 @@ var Artist = DS.Model.extend({
   albums: DS.hasMany('album')
 });
 
-Artist.reopenClass({
-  FIXTURES: [
-    {id: 1, name: 'Lana Del Rey'},
-    {id: 2, name: 'AJ Davila'}
-  ]
-});
+// Artist.reopenClass({
+//   FIXTURES: [
+//     {id: 1, name: 'Lana Del Rey'},
+//     {id: 2, name: 'AJ Davila'}
+//   ]
+// });
 
 export default Artist;
