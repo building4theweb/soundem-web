@@ -19,7 +19,7 @@
       console.log('');
       window.ENV['simple-auth'] = {
         authorizer: 'authorizer:custom',
-        crossOriginWhitelist: ['https://soundem-api.herokuapp.com'],
+        crossOriginWhitelist: [SoundemWebENV.apiHost],
         routeAfterAuthentication: 'albums'
       }
       window.EmberENV = window.SoundemWebENV.EmberENV;

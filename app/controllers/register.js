@@ -12,14 +12,14 @@ export default Ember.Controller.extend({
       this.set('password2', null);
 
       Ember.$.ajax({
-        url: 'https://soundem-api.herokuapp.com/api/v1/register',
+        url: SoundemWebENV.apiRoot + '/register',
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({
             email: email,
             password: password
         })
-      }).then(function(res) {
+      }).then(function() {
 
         // Login after registration
         Ember.run(function() {
@@ -31,7 +31,7 @@ export default Ember.Controller.extend({
           });
         });
 
-      })
+      });
     }
   }
 });

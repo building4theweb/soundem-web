@@ -2,8 +2,6 @@ import Ember from 'ember';
 import Base from 'simple-auth/authenticators/base';
 
 var CustomAuthenticator = Base.extend({
-  host: 'https://soundem-api.herokuapp.com/api/v1',
-
   restore: function(data) {
     return new Ember.RSVP.Promise(function(resolve, reject) {
       if (!Ember.isEmpty(data.token)) {
@@ -15,10 +13,9 @@ var CustomAuthenticator = Base.extend({
   },
 
   authenticate: function(options) {
-    var self = this;
     return new Ember.RSVP.Promise(function(resolve, reject) {
       Ember.$.ajax({
-        url: self.host + '/login',
+        url: SoundemWebENV.apiRoot + '/login',
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({
