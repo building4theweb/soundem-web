@@ -1,7 +1,7 @@
 <h1 class="auth-logo">Soundem</h1>
 <div class="auth-form-wrapper">
   <h3>Register</h3>
-  <form {{action 'submitForm'}}>
+  <form {{action 'submitForm' on='submit'}}>
     <p>{{input type="text" value=email placeholder="Email" autofocus="autofocus"}}</p>
     <p>{{input type="password" value=password placeholder="Password"}}</p>
     <p>{{input type="password" value=password2 placeholder="Confirm Password"}}</p>

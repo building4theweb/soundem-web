@@ -20,17 +20,17 @@ var CustomAuthenticator = Base.extend({
       Ember.$.ajax({
         url: self.host + '/login',
         type: 'POST',
+        contentType: 'application/json',
         data: JSON.stringify({
             email: options.identification,
             password: options.password
-        }),
-        contentType: 'application/json'
-      }).then(function(response) {
+        })
+      }).then(function(res) {
         Ember.run(function() {
           resolve({
-            token: response.user.token,
-            userId: response.user.id,
-            email: response.user.email
+            token: res.user.token,
+            userId: res.user.id,
+            email: res.user.email
           });
         });
       }, function(xhr) {
