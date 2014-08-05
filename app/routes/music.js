@@ -7,8 +7,6 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
 
     var userId = this.get('session.content.userId');
     controller.set('user', this.store.find('user', userId));
-
-    this.transitionTo('albums');
   },
 
   actions: {
