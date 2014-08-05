@@ -1,10 +1,9 @@
 import Ember from 'ember';
+import AuthenticatedRouteMixin from 'simple-auth/mixins/authenticated-route-mixin';
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(AuthenticatedRouteMixin, {
   model: function() {
-    // TODO: Fix query
-    // return this.store.find('song', {favorite: true});
-    return this.store.find('song');
+    return this.store.find('song', {favorite: true});
   },
 
   setupController: function(controller, model) {

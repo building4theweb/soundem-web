@@ -7,6 +7,10 @@
                onPrev='onSongPrev'}}
 
   {{se-display isPlaying=audioIsPlaying songInPlayer=songInPlayer}}
+
+  <a href="#" {{ action 'invalidateSession' }} class="logout-image">
+    <img src="images/logout.svg"> Logout
+  </a>
 </section>
 
 <section class="sidebar">

@@ -1,10 +1,14 @@
 import Ember from 'ember';
+import AuthenticatedRouteMixin from 'simple-auth/mixins/authenticated-route-mixin';
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(AuthenticatedRouteMixin, {
   setupController: function(controller, model) {
     this._super(controller, model);
-    var userId = 1;
-    controller.set('account', this.store.find('account', userId));
+
+    var userId = this.get('session.content.userId');
+    controller.set('user', this.store.find('user', userId));
+
+    this.transitionTo('albums');
   },
 
   actions: {

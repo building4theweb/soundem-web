@@ -354,3 +354,23 @@ a .album-artist {
     font-size: 100px;
     color:#767676;
 }
+
+
+.logout-image {
+    display: block;
+    float: right;
+    position: relative;
+    top: -150px;
+    right: 10px;
+}
+
+a.logout-image {
+    text-decoration: none;
+    color: #808080;
+}
+
+.logout-image img {
+    margin-right: 3px;
+    position:relative;
+    top: 3px;
+}

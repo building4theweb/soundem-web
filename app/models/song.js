@@ -4,7 +4,8 @@ var Song = DS.Model.extend({
   name: DS.attr('string'),
   album: DS.belongsTo('album'),
   favorite: DS.attr('boolean'),
-  url: DS.attr('string')
+  url: DS.attr('string'),
+  duration: DS.attr('number')
 });
 
 Song.reopenClass({

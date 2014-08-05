@@ -1,8 +1,8 @@
 <h1 class="auth-logo">Soundem</h1>
 <div class="auth-form-wrapper">
   <h3>Login</h3>
-  <form {{action 'submitForm'}}>
-    <p>{{input type="text" value=email placeholder="Email" autofocus="autofocus"}}</p>
+  <form {{action 'authenticate' on='submit'}}>
+    <p>{{input type="text" value=identification placeholder="Email" autofocus="autofocus"}}</p>
     <p>{{input type="password" value=password placeholder="Password"}}</p>
     <p><button>Login</button> or {{link-to 'Register' 'register'}}</p>
   </form>

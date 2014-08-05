@@ -1,9 +1,6 @@
 import Ember from 'ember';
+import LoginControllerMixin from 'simple-auth/mixins/login-controller-mixin';
 
-export default Ember.Controller.extend({
-  actions: {
-    submitForm: function() {
-      console.log('try to log in', this.get('email'), this.get('password'));
-    }
-  }
+export default Ember.Controller.extend(LoginControllerMixin, {
+  authenticator: 'authenticator:custom'
 });
