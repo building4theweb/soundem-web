@@ -18,5 +18,6 @@ var app = new EmberApp();
 // along with the exports of each module as its value.
 
 app.import('vendor/normalize-css/normalize.css');
+app.import('vendor/moment/moment.js');
 
 module.exports = app.toTree();
