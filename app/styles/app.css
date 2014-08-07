@@ -310,6 +310,11 @@ a .album-artist {
     font-size: 16px;
     text-align: center;
     margin:0;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 190px;
 }
 
 .se-display h3 {
