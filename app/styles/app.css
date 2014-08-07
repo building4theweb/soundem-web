@@ -149,7 +149,7 @@ a .album-artist {
     font-size: 12px;
 }
 .album-detail-wrapper {
-    padding: 20px;
+    padding: 20px 0 0 20px;
     width: 800px;
 }
 .album-name-big {
@@ -184,8 +184,11 @@ a .album-artist {
     border-bottom: 1px solid #f3f3f3;
 }
 .song-view.in-album-view {
-    width: 400px;
+    width: 350px;
     min-width: inherit;
+}
+.song-view.in-album-view .song-name {
+    width: 260px;
 }
 .song-view.in-album-view .song-duration {
     float: right;
@@ -202,6 +205,9 @@ a .album-artist {
 .song-artist,
 .song-duration {
     display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .song-star-link {
     position:relative;
@@ -211,18 +217,17 @@ a .album-artist {
 .song-name,
 .song-album,
 .song-artist{
-    width: 19%;
     overflow: hidden;
 }
 .song-star {
-    max-width: 17px;
+    width: 17px;
 }
 .song-name {
-    min-width:200px;
+    width:250px;
 }
 .song-album,
 .song-artist {
-    min-width:150px;
+    width:200px;
 }
 .song-duration {
     float:right;
@@ -233,7 +238,6 @@ a .album-artist {
 /* song lists */
 .song-list-header {
     width: 100%;
-    min-width: 600px;
     background-color: #f6f6f6;
     border-bottom: 1px solid #e7e7e7;
     font-weight: bold;
